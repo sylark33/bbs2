@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CraftModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="discuss_infos">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="theme" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="AllContent" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="time" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="author" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="solve" Type="nvarchar" MaxLength="5" />
+  </EntityType>
+  <EntityType Name="player_infos">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="uid" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="pwd" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="reply_infos">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="theme_id" Type="int" Nullable="false" />
+    <Property Name="reply" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ReplyAuthor" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ReplyTime" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="whitelistquestion_infos">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="question" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="A" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="B" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="C" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="D" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="answer" Type="nvarchar" MaxLength="5" Nullable="false" />
+  </EntityType>
+  <EntityType Name="yicraft_infos">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="loginname" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="mail" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="actualname" Type="nvarchar" MaxLength="10" />
+    <Property Name="idcard" Type="int" />
+    <Property Name="age" Type="int" />
+  </EntityType>
+  <EntityContainer Name="CraftModelStoreContainer">
+    <EntitySet Name="discuss_infos" EntityType="Self.discuss_infos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="player_infos" EntityType="Self.player_infos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="reply_infos" EntityType="Self.reply_infos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="whitelistquestion_infos" EntityType="Self.whitelistquestion_infos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="yicraft_infos" EntityType="Self.yicraft_infos" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

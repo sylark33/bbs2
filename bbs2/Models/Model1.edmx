@@ -1,0 +1,217 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="CraftModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="discuss_infos">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="theme" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="AllContent" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="time" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="author" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="solve" Type="nvarchar" MaxLength="5" />
+        </EntityType>
+        <EntityType Name="player_infos">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="uid" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="pwd" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="reply_infos">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="theme_id" Type="int" Nullable="false" />
+          <Property Name="reply" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="ReplyAuthor" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="ReplyTime" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="whitelistquestion_infos">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="question" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="A" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="B" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="C" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="D" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="answer" Type="nvarchar" MaxLength="5" Nullable="false" />
+        </EntityType>
+        <EntityType Name="yicraft_infos">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="loginname" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="mail" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="actualname" Type="nvarchar" MaxLength="10" />
+          <Property Name="idcard" Type="int" />
+          <Property Name="age" Type="int" />
+        </EntityType>
+        <EntityContainer Name="CraftModelStoreContainer">
+          <EntitySet Name="discuss_infos" EntityType="Self.discuss_infos" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="player_infos" EntityType="Self.player_infos" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="reply_infos" EntityType="Self.reply_infos" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="whitelistquestion_infos" EntityType="Self.whitelistquestion_infos" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="yicraft_infos" EntityType="Self.yicraft_infos" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="CraftModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="discuss_infos">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="theme" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="AllContent" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="time" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="author" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="solve" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="player_infos">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="uid" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="pwd" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="reply_infos">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="theme_id" Type="Int32" Nullable="false" />
+          <Property Name="reply" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ReplyAuthor" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ReplyTime" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="whitelistquestion_infos">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="question" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="A" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="B" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="C" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="D" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="answer" Type="String" MaxLength="5" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="yicraft_infos">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="loginname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="mail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="actualname" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="idcard" Type="Int32" />
+          <Property Name="age" Type="Int32" />
+        </EntityType>
+        <EntityContainer Name="CraftEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="discuss_infos" EntityType="Self.discuss_infos" />
+          <EntitySet Name="player_infos" EntityType="Self.player_infos" />
+          <EntitySet Name="reply_infos" EntityType="Self.reply_infos" />
+          <EntitySet Name="whitelistquestion_infos" EntityType="Self.whitelistquestion_infos" />
+          <EntitySet Name="yicraft_infos" EntityType="Self.yicraft_infos" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="CraftModelStoreContainer" CdmEntityContainer="CraftEntities">
+          <EntitySetMapping Name="discuss_infos">
+            <EntityTypeMapping TypeName="CraftModel.discuss_infos">
+              <MappingFragment StoreEntitySet="discuss_infos">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="theme" ColumnName="theme" />
+                <ScalarProperty Name="AllContent" ColumnName="AllContent" />
+                <ScalarProperty Name="time" ColumnName="time" />
+                <ScalarProperty Name="author" ColumnName="author" />
+                <ScalarProperty Name="solve" ColumnName="solve" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="player_infos">
+            <EntityTypeMapping TypeName="CraftModel.player_infos">
+              <MappingFragment StoreEntitySet="player_infos">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="uid" ColumnName="uid" />
+                <ScalarProperty Name="pwd" ColumnName="pwd" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="reply_infos">
+            <EntityTypeMapping TypeName="CraftModel.reply_infos">
+              <MappingFragment StoreEntitySet="reply_infos">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="theme_id" ColumnName="theme_id" />
+                <ScalarProperty Name="reply" ColumnName="reply" />
+                <ScalarProperty Name="ReplyAuthor" ColumnName="ReplyAuthor" />
+                <ScalarProperty Name="ReplyTime" ColumnName="ReplyTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="whitelistquestion_infos">
+            <EntityTypeMapping TypeName="CraftModel.whitelistquestion_infos">
+              <MappingFragment StoreEntitySet="whitelistquestion_infos">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="question" ColumnName="question" />
+                <ScalarProperty Name="A" ColumnName="A" />
+                <ScalarProperty Name="B" ColumnName="B" />
+                <ScalarProperty Name="C" ColumnName="C" />
+                <ScalarProperty Name="D" ColumnName="D" />
+                <ScalarProperty Name="answer" ColumnName="answer" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="yicraft_infos">
+            <EntityTypeMapping TypeName="CraftModel.yicraft_infos">
+              <MappingFragment StoreEntitySet="yicraft_infos">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="loginname" ColumnName="loginname" />
+                <ScalarProperty Name="mail" ColumnName="mail" />
+                <ScalarProperty Name="actualname" ColumnName="actualname" />
+                <ScalarProperty Name="idcard" ColumnName="idcard" />
+                <ScalarProperty Name="age" ColumnName="age" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="无" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

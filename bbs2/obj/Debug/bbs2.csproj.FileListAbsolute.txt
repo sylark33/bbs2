@@ -86,3 +86,10 @@ D:\MEOW\Progect\bbs\bbs2\obj\Debug\bbs2.dll
 D:\MEOW\Progect\bbs\bbs2\obj\Debug\bbs2.pdb
 D:\MEOW\Progect\bbs\bbs2\bin\bbsBLL.dll
 D:\MEOW\Progect\bbs\bbs2\bin\bbsBLL.pdb
+D:\MEOW\Progect\bbs\bbs2\bin\bbsDAL.dll
+D:\MEOW\Progect\bbs\bbs2\bin\EntityFramework.dll
+D:\MEOW\Progect\bbs\bbs2\bin\EntityFramework.SqlServer.dll
+D:\MEOW\Progect\bbs\bbs2\bin\bbsDAL.pdb
+D:\MEOW\Progect\bbs\bbs2\bin\EntityFramework.xml
+D:\MEOW\Progect\bbs\bbs2\bin\EntityFramework.SqlServer.xml
+D:\MEOW\Progect\bbs\bbs2\bin\zh-Hans\EntityFramework.resources.dll

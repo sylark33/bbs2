@@ -7,7 +7,7 @@ using bbsBLL;
 
 namespace bbs2.Controllers
 {
-    public class UserController : Controller
+   public class UserController : Controller
     {
         UserService userService = new UserService();
 

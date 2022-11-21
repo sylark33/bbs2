@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>用户登录</h2>
+<body>
+    <div>
+        <form action="Login/Dologin" method="post">
+            <p>用户名：<input name="uname" id="uname" /></p>
+            <p>密码：<input type="password" name="upwd" id="upwd" /></p>
+            <p><input type="submit" value="登陆" /></p>
+            <h2><span style="color:red">@ViewBag.Msg</span></h2>
+        </form>
+
+        <form action="Login/Create" method="post">
+            <p>注册<input name="vuc" id="vuc" /></p>
+            <p><input type="submit" value="register" /></p>
+        </form>
+
+        <div>
+            <a href="../Login/Create"><input type="button" value="注册2"></a>
+        </div>
+
+    </div>
+</body>

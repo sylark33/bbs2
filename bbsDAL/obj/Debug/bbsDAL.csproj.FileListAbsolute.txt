@@ -1,0 +1,6 @@
+D:\MEOW\Progect\bbs\bbsDAL\bin\Debug\bbsDAL.dll
+D:\MEOW\Progect\bbs\bbsDAL\bin\Debug\bbsDAL.pdb
+D:\MEOW\Progect\bbs\bbsDAL\obj\Debug\bbsDAL.csproj.AssemblyReference.cache
+D:\MEOW\Progect\bbs\bbsDAL\obj\Debug\bbsDAL.csproj.CoreCompileInputs.cache
+D:\MEOW\Progect\bbs\bbsDAL\obj\Debug\bbsDAL.dll
+D:\MEOW\Progect\bbs\bbsDAL\obj\Debug\bbsDAL.pdb
